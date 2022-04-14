@@ -41,4 +41,22 @@ for i in range(m):
         print(matrix_b[i][j], end = " ")
     print()
 
-301059767
+result = [[0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]]
+
+for i in range(len(matrix_a)):
+   # iterate through columns of Y
+   for j in range(len(matrix_b[0])):
+       # iterate through rows of Y
+       for k in range(len(matrix_b)):
+           result[i][j] += matrix_a[i][k] * matrix_b[k][j]
+
+
+# for i in range(i):
+#     for j in range(n):
+#         print(result[i][j], end = " ")
+#     print()
+
+for r in result:
+    print(r)
