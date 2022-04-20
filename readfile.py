@@ -1,8 +1,8 @@
 f = open("demofile.txt", "r")
 print(f.read())
-
+print("\n")
 f = open("demofile.txt", "a")
-f.write("Now the file has more content!")
+f.write("\n Sharad noob mula!")
 f.close()
 
 #open and read the file after the appending:
