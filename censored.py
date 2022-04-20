@@ -1,5 +1,5 @@
 # import operator  # For contains function
-from profanity_filter import ProfanityFilter  # For censoring words
+from better_profanity import profanity  # For censoring words
 
 file = open('swear.txt', 'r')
 user_input = input("Enter a text: ")
