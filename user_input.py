@@ -24,7 +24,7 @@ for key, values in user_details.items():
     values = key.title() + ": " + values
     fout.write(values)
     fout.write("\n")
-print("Successfully wrote to a file. Clsoing the file ........")
+print("Successfully wrote to a file. Closing the file ........")
 fout.close()
 
 print("Reading the contents of a file ...........")

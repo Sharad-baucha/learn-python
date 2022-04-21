@@ -1,0 +1,7 @@
+Name: Sharad Shrestha
+Email: sharad69@gmail.com
+Age: 21
+Address: Kathmandu
+Cellno: 9818284761
+Job: Student
+Gender: male
