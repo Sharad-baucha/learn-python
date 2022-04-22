@@ -14,5 +14,17 @@
 # #print(thisdict.items())
 # print(thisdict)
 
-dic1 = {}
-dic2 = {}
+# firstname = "sharad"
+# lastname = "shrestha"
+# value = {"firstname":"sharad","lastname":"shrestha"}
+# student = {"name":value}
+
+# print(student["name"]["lastname"])
+
+student = {
+    "name" : {"firstname":"sharad" , "lastname":"shrestha"},
+    "rollno" : 69,
+    "class" : "CSIT"
+}
+
+print(student["name"]["firstname"])
