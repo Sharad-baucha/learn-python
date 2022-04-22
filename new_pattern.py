@@ -1,13 +1,13 @@
-# k = 65
-# for i in range(1 , 6 , 1):
+#k = 65
+for i in range(1 , 6 , 1):
     
-#     for j in range(1 , 6 , 1):
+    for j in range(1 , 6 , 1):
         
-#         if j <= i:
-#             print(chr(k), end=" ")
+        if j <= i:
+            print(j, end=" ")
         
-#     print()
-#     k += 1
+    print()
+    #k += 1
 
 
 for i in range(1 , 6 , 1):
