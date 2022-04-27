@@ -65,8 +65,10 @@ quiz = {
         "correct_ans" : "d"
     }
 }
+user_name = input("Enter your name:")
 score = 0
 q_no = 1
+attempts = 1
 
 def check_ans(question, ans ,score,q):
     if quiz[question]["correct_ans"] == ans.lower():
@@ -117,3 +119,40 @@ elif score == 4 or score == 5:
 else:
     print(f"\t\t\t\tYour score is {score}.\n\t\t\t\tCongratulations!!!! You beat the quiz.\n\n\t\t\t\tYOU WILL GET REAL JUICE AS A PRIZE.\n")
 
+with open("username.txt" , "r") as u:
+    uname = u.readlines()
+    for i in range(len(uname)):
+        if (user_name.lower()+"\n" == uname[i].lower()):
+            attempts += 1    
+
+f1 = open("quiz.txt", "a")
+f2 = open("score.txt", "a")
+f3 = open("username.txt", "a")
+f1.write("Name: %s \t\t\tScore: %d \t\t\tAttempts: %d\n" % (user_name, score, attempts))
+f2.write("%d\n" % (score))
+f3.write(user_name + "\n")
+f1.close()
+f2.close()
+f3.close()
+
+print("\t\t Leaderboards-->")
+
+with open("quiz.txt" , "r") as file1:
+    with open("score.txt" , "r") as file2:
+        data1 = file1.readlines()
+        data2 = file2.readlines()
+        x = len(data1)
+
+        for i in range(x-1):
+            for j in range(0 , x-i-1):
+                if data2[j] < data2[j+1]:
+                    data1[j], data1[j + 1] = data1[j + 1], data1[j]
+                    data2[j], data2[j + 1] = data2[j + 1], data2[j]
+
+with open("quiz2.txt" , "w") as file3:
+    with open("score2.txt" , "w") as file4:    
+        file3.writelines(data1)
+        file4.writelines(data2) 
+
+with open("quiz2.txt" , "r") as file5:
+    print(file5.read())
