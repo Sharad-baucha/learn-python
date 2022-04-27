@@ -84,8 +84,12 @@ def check_ans(question, ans ,score,q):
             print("\n\t\t\tWrong Answer :(\tTry the next question-->>")
         return False
 
+import datetime
+now = datetime.datetime.now()
+start_time = now.strftime("%H:%M:%S")
+
 for question in quiz:
- 
+    
     print("\n")
     print(f"\t\t#Question Number:{q_no}")
     print(quiz[question]['question'])
@@ -105,6 +109,10 @@ for question in quiz:
         score += 1
     
     q_no += 1
+
+import datetime
+now = datetime.datetime.now()
+end_time = now.strftime("%H:%M:%S")
 
 print("\n\t\t\t\tThe Quiz is over!!!!!!!")        
 if score == 0:
@@ -128,7 +136,7 @@ with open("username.txt" , "r") as u:
 f1 = open("quiz.txt", "a")
 f2 = open("score.txt", "a")
 f3 = open("username.txt", "a")
-f1.write("Name: %s \t\t\tScore: %d \t\t\tAttempts: %d\n" % (user_name, score, attempts))
+f1.write("Name: %s \t| Score: %d \t| Attempt No.: %d \t| Start Time: %s \t| End Time: %s\n" % (user_name, score, attempts, start_time, end_time))
 f2.write("%d\n" % (score))
 f3.write(user_name + "\n")
 f1.close()
