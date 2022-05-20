@@ -1,0 +1,5 @@
+Name,Address,Age
+Sharad,Kathmandu,20
+Ashish,Bhaktapur,21
+Sandip,Thankot,21
+Sugam,Kirtipur,22
